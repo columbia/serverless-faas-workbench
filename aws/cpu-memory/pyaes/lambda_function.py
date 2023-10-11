@@ -31,3 +31,11 @@ def lambda_handler(event, context):
 
     latency = time() - start
     return latency
+
+if __name__ == "__main__":
+    event = {
+        "length_of_message": 4096,
+        "num_of_iterations": 1000
+    }
+    result = lambda_handler(event, None)
+    print(result)
